@@ -268,6 +268,13 @@
                     <td> Nota 7.5 </td>
                 </tr>
 
+                <tr>
+					<th class="text-center table-dark" colspan="7" id="gAdd">Adicionados Recentemente</th>
+				</tr>
+				<tr id="inserirTabela">
+					
+				</tr>
+
             </tbody>
         </table>
 
@@ -277,27 +284,41 @@
 
         <h1 class=" display-6 text-center mb-5" id="cadFilme">Cadastrar Filmes</h1>
         <div class="container mb-5">
-            <form action="">
+            <form name="cadastrar" onsubmit="event.preventDefault()">
                 <div class="row">
                     <div class="mb-3 col">
                         <label for="codFilm" class="form-label">Código:</label>
-                        <input type="text" id="codFilm" class="form-control" placeholder="00" required>
+                        <input type="text" id="codFilm" class="form-control" placeholder="00" name="codigo" required>
                     </div>
                     <div class="mb-3 col">
                         <label for="codDate" class="form-label">Data de Lançamento:</label>
-                        <input type="date" id="codDate" class="form-control" required>
+                        <input type="date" id="codDate" class="form-control" name="data" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3 col">
                         <label for="tilteFilm" class="form-label">Título:</label>
-                        <input type="text" id="titleFilm" class="form-control" required>
+                        <input type="text" id="titleFilm" class="form-control" name="titulo" required>
                     </div>
                     <div class="mb-3 col">
                         <label for="directorFilm" class="form-label">Diretor:</label>
-                        <input type="text" id="directorFilm" class="form-control" required>
+                        <input type="text" id="directorFilm" class="form-control" name="diretor" required>
                     </div>
                 </div>
+
+                <div class="row">
+                    <!-- ator atriz -->
+                    <div class="mb-3 col">
+                        <label for="atorFilm" class="form-label">Ator/Atriz principal: </label>
+                        <input type="text" id="atorFilm" class="form-control" name="ator" required>
+                    </div>
+                    <!-- nota IMDb -->
+                    <div class="mb-3 col">
+                        <label for="notaFilm" class="form-label">Nota IMDb: </label>
+                        <input type="number" id="notaFilm" class="form-control" name="nota" required>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="mb-3 col form-check">
                         <input type="radio" name="radio" id="radGenAc" class="form-check-input" value="acao">
@@ -325,7 +346,7 @@
                     </div>
                 </div>
                 <div class="col-auto text-center">
-                    <button type="submit" class="btn btn-dark mb-3">
+                    <button type="submit" class="btn btn-dark mb-3" onclick="insere()">
                         Cadastrar
                     </button>
                 </div>
@@ -333,12 +354,17 @@
         </div>
 
     </div>
+    <script type="text/javascript"
+        src="./scripts.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
